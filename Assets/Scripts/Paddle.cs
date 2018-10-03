@@ -21,4 +21,5 @@ public class Paddle : MonoBehaviour {
 		Vector3 newPaddlePos = new Vector3(xPos, transform.position.y, transform.position.z);
 		transform.position = newPaddlePos;
 	}
+
 }
