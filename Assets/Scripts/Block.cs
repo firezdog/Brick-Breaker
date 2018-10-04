@@ -11,21 +11,12 @@ public class Block : MonoBehaviour {
 
 	private void Start() {
 		numberOfSounds = collideSounds.Length;
-		player = GetComponent<AudioSource>();
-		rend = GetComponent<SpriteRenderer>();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collission) {
-		if (gameObject.tag == "block") {
-			int randSoundIndex = Random.Range(0, numberOfSounds);
-			AudioClip toPlay = collideSounds[randSoundIndex];
-			player.PlayOneShot(clip: toPlay);
-			rend.enabled = false;
-		}
-		Invoke("Break", 0.1f);
-	}
-
-	private void Break() {
+		int randSoundIndex = Random.Range(0, numberOfSounds);
+		AudioClip toPlay = collideSounds[randSoundIndex];
+		AudioSource.PlayClipAtPoint(toPlay, Camera.current.transform.position);
 		Destroy(gameObject);
 	}
 }
