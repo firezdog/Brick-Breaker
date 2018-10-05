@@ -13,10 +13,22 @@ public class Block : MonoBehaviour {
 		numberOfSounds = collideSounds.Length;
 	}
 
-	private void OnCollisionEnter2D(Collision2D collission) {
-		int randSoundIndex = Random.Range(0, numberOfSounds);
-		AudioClip toPlay = collideSounds[randSoundIndex];
-		AudioSource.PlayClipAtPoint(toPlay, Camera.current.transform.position);
-		Destroy(gameObject);
-	}
+	private void OnCollisionEnter2D(Collision2D collission)
+    {
+        playHitSound();
+        destroyBlock();
+    }
+
+    private void destroyBlock()
+    {
+        Destroy(gameObject);
+    }
+
+    private void playHitSound()
+    {
+        int randSoundIndex = Random.Range(0, numberOfSounds);
+        AudioClip toPlay = collideSounds[randSoundIndex];
+        AudioSource.PlayClipAtPoint(toPlay, Camera.current.transform.position);
+    }
+
 }

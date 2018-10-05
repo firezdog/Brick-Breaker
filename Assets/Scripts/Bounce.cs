@@ -5,8 +5,17 @@ using UnityEngine;
 public class Bounce : MonoBehaviour {
 
 // Script controls "bouncing" sound for walls and paddle.
-	private void OnCollisionEnter2D(Collision2D other) {
-		GetComponent<AudioSource>().Play();
+
+	private AudioSource source;
+	
+	void Start() 
+	{
+		source = GetComponent<AudioSource>();	
+	}
+	
+	private void OnCollisionEnter2D(Collision2D other) 
+	{
+		source.PlayOneShot(source.clip);
 	}
 
 }
