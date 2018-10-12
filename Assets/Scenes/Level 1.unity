@@ -252,11 +252,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4249946482928130, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.03
+      value: 11.96
       objectReference: {fileID: 0}
     - target: {fileID: 4249946482928130, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.0100002
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 4249946482928130, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
       propertyPath: m_LocalPosition.z
@@ -289,11 +289,11 @@ Prefab:
       objectReference: {fileID: 978102681}
     - target: {fileID: 4249946482928130, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 8.596364
       objectReference: {fileID: 0}
     - target: {fileID: 4249946482928130, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 8.356512
       objectReference: {fileID: 0}
     - target: {fileID: 4249946482928130, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
       propertyPath: m_LocalScale.z
@@ -445,6 +445,24 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1c18fcb97e933d4b87c0f8f749d6b85, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1715530782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1464098990629112, guid: 9a105359f2908194a9daa3d6477c7c28,
+    type: 2}
+  m_PrefabInternal: {fileID: 2115260157}
+--- !u!114 &1715530783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715530782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a26bb1946eabcc4bad7a89da6bbd687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  score: 0
 --- !u!1001 &1936223866
 Prefab:
   m_ObjectHideFlags: 0
@@ -573,7 +591,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1464098990629112, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_Name
+      value: Game State
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114997529700085438, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &2146270345
