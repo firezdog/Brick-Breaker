@@ -6,8 +6,6 @@ public class Block : MonoBehaviour {
 
 	[SerializeField] AudioClip[] collideSounds;
 	private int numberOfSounds;
-	private AudioSource player;
-	private SpriteRenderer rend;
     private GameStatus state;
 
 	private void Start() {
@@ -15,7 +13,7 @@ public class Block : MonoBehaviour {
         state = FindObjectOfType<GameStatus>();
 	}
 
-	private void OnCollisionEnter2D(Collision2D collission)
+	private void OnCollisionEnter2D()
     {
         playHitSound();
         destroyBlock();

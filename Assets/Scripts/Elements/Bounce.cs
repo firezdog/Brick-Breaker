@@ -13,9 +13,9 @@ public class Bounce : MonoBehaviour {
 		source = GetComponent<AudioSource>();	
 	}
 	
-	private void OnCollisionEnter2D(Collision2D other) 
+	private void OnCollisionEnter2D() 
 	{
-		source.PlayOneShot(source.clip);
+		AudioSource.PlayClipAtPoint(source.clip, Camera.current.transform.position);
 	}
 
 }
