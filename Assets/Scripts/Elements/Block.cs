@@ -29,7 +29,7 @@ public class Block : MonoBehaviour {
     {
         int randSoundIndex = Random.Range(0, numberOfSounds);
         AudioClip toPlay = collideSounds[randSoundIndex];
-        AudioSource.PlayClipAtPoint(toPlay, Camera.current.transform.position);
+        AudioSource.PlayClipAtPoint(toPlay, Camera.main.transform.position);
     }
 
 }
