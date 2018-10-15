@@ -54,3 +54,4 @@ MonoBehaviour:
   speed: 1
   score: 0
   pointsPerBrick: 10
+  scoreDisplay: {fileID: 0}
