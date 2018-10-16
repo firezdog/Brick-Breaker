@@ -333,6 +333,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4813555519140490, guid: c321dfb48672bd043862c5133fc49e92,
     type: 2}
   m_PrefabInternal: {fileID: 1081781889}
+--- !u!1001 &1160100361
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381458920349928, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610653738748910, guid: 9a105359f2908194a9daa3d6477c7c28,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610653738748910, guid: 9a105359f2908194a9daa3d6477c7c28,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a105359f2908194a9daa3d6477c7c28, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!114 &1522798113 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114940008002879198, guid: b4583c627971c3c4ba485ee5cbf36f8b,

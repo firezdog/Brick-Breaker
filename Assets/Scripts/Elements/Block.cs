@@ -10,13 +10,15 @@ public class Block : MonoBehaviour {
 
 	private void Start() {
 		numberOfSounds = collideSounds.Length;
-        state = FindObjectOfType<GameStatus>();
 	}
 
 	private void OnCollisionEnter2D()
     {
         playHitSound();
         destroyBlock();
+        if (state == null) {
+            state = FindObjectOfType<GameStatus>();
+        }
         state.increaseScore();
     }
 

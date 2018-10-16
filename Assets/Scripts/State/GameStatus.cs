@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class GameStatus : MonoBehaviour {
 
@@ -23,8 +24,13 @@ public class GameStatus : MonoBehaviour {
 		}
 	}
 
-	// Use this for initialization
-	void Start () 
+    public void destroy()
+    {
+        Destroy(gameObject);
+    }
+
+    // Use this for initialization
+    void Start () 
 	{
 		scoreDisplay.text = score.ToString();
 	}
@@ -33,13 +39,12 @@ public class GameStatus : MonoBehaviour {
 	void Update () 
 	{
 		Time.timeScale = speed;
-		scoreDisplay.text = score.ToString();
 	}
 
 	public void increaseScore ()
 	{
-		Debug.Log("Increasing score");
 		score += pointsPerBrick;
+		scoreDisplay.text = score.ToString();
 	}
 
 }
