@@ -111,8 +111,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 167
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea927c2f905d48048b6ae3936f028d3d, type: 2}
-  m_sharedMaterial: {fileID: 21305479608804436, guid: ea927c2f905d48048b6ae3936f028d3d,
+  m_fontAsset: {fileID: 11400000, guid: 594b5bd5501ae6e4da5d4b464f34f294, type: 2}
+  m_sharedMaterial: {fileID: 21485348022766900, guid: 594b5bd5501ae6e4da5d4b464f34f294,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
