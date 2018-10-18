@@ -15,12 +15,17 @@ public class Level : MonoBehaviour {
 	void Update () {
 		numberOfBlocks = getNumberOfBlocks();
 		if (numberOfBlocks == 0) {
-			loader.LoadNextScene();
+			Invoke("loadNextSceneWrapper", 0.25f);
 		}
 	}
 
 	private int getNumberOfBlocks() {
-		return GameObject.FindGameObjectsWithTag("block").Length;
+		return 	FindObjectsOfType<Block>().Length - 
+				GameObject.FindGameObjectsWithTag("unbreakable").Length;
+	}
+
+	private void loadNextSceneWrapper() {
+		loader.LoadNextScene();
 	}
 
 }

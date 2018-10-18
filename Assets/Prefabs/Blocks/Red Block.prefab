@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 82634450122207216}
   m_Layer: 0
   m_Name: Red Block
-  m_TagString: block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07ce65838172cf442ab9f1dfc3d44a1d, type: 3}
   - {fileID: 8300000, guid: 80ac6b315fffa654cb9ca27412220721, type: 3}
   - {fileID: 8300000, guid: a2c0ac9a1b55481419dc3614f38d9129, type: 3}
+  destructionEffect: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 2}
 --- !u!212 &212425625376685950
 SpriteRenderer:
   m_ObjectHideFlags: 1
