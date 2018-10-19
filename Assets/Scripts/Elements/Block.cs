@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class Block : MonoBehaviour {
 
+    [SerializeField] int maxHealth;
+    private int currentHealth;
 	[SerializeField] AudioClip[] collideSounds;
     [SerializeField] GameObject destructionEffect;
 	private int numberOfSounds;
     private GameStatus state;
+    private Vector3 cameraPostion;
 
 	private void Start() {
 		numberOfSounds = collideSounds.Length;
+        currentHealth = maxHealth;
+        cameraPostion = Camera.main.transform.position;
 	}
 
 	private void OnCollisionEnter2D()
     {
         if (gameObject.tag != "unbreakable") 
         {
-            playHitSound();
-            createDestroyEffect();
-            destroyBlock();
-            increaseScore();
+            if (currentHealth <= 1) 
+            {
+                createDestroyEffect();
+                destroyBlock();
+                increaseScore();
+            }
+            currentHealth--;
         }
+        playHitSound();
     }
 
     private void increaseScore() 
@@ -51,7 +60,7 @@ public class Block : MonoBehaviour {
     {
         int randSoundIndex = Random.Range(0, numberOfSounds);
         AudioClip toPlay = collideSounds[randSoundIndex];
-        AudioSource.PlayClipAtPoint(toPlay, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(toPlay, cameraPostion);
     }
 
 }
