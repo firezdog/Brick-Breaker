@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Block : MonoBehaviour {
 
+    //health and affordances
     [SerializeField] int maxHealth;
     private int currentHealth;
-	[SerializeField] AudioClip[] collideSounds;
-    [SerializeField] GameObject destructionEffect;
+    [SerializeField] Sprite[] healthSprites;
+    	
+    //sounds
+    [SerializeField] AudioClip[] collideSounds;
 	private int numberOfSounds;
-    private GameStatus state;
     private Vector3 cameraPostion;
+
+    //destruction
+    [SerializeField] GameObject destructionEffect;
+
+    //book-keeping
+    private GameStatus state;
 
 	private void Start() {
 		numberOfSounds = collideSounds.Length;
@@ -27,8 +35,11 @@ public class Block : MonoBehaviour {
                 createDestroyEffect();
                 destroyBlock();
                 increaseScore();
+            } 
+            else {
+                currentHealth--;
+                gameObject.GetComponent<SpriteRenderer>().sprite = healthSprites[currentHealth-1];
             }
-            currentHealth--;
         }
         playHitSound();
     }
