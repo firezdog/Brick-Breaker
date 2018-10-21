@@ -38,10 +38,17 @@ public class Block : MonoBehaviour {
             } 
             else {
                 currentHealth--;
-                gameObject.GetComponent<SpriteRenderer>().sprite = healthSprites[currentHealth-1];
+                replaceSprite();
+                
             }
         }
         playHitSound();
+    }
+
+    private void replaceSprite() 
+    {
+        var rend = gameObject.GetComponent<SpriteRenderer>();
+        rend.sprite = healthSprites[currentHealth-1];
     }
 
     private void increaseScore() 
