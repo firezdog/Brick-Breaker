@@ -5,7 +5,7 @@ using UnityEngine;
 public class Block : MonoBehaviour {
 
     //health and affordances
-    [SerializeField] int maxHealth;
+    int maxHealth;
     private int currentHealth;
     [SerializeField] Sprite[] healthSprites;
     	
@@ -20,7 +20,9 @@ public class Block : MonoBehaviour {
     //book-keeping
     private GameStatus state;
 
-	private void Start() {
+	private void Start() 
+    {
+        maxHealth = healthSprites.Length + 1;
 		numberOfSounds = collideSounds.Length;
         currentHealth = maxHealth;
         cameraPostion = Camera.main.transform.position;
@@ -35,8 +37,7 @@ public class Block : MonoBehaviour {
                 createDestroyEffect();
                 destroyBlock();
                 increaseScore();
-            } 
-            else {
+            } else {
                 currentHealth--;
                 replaceSprite();
                 
@@ -48,7 +49,16 @@ public class Block : MonoBehaviour {
     private void replaceSprite() 
     {
         var rend = gameObject.GetComponent<SpriteRenderer>();
-        rend.sprite = healthSprites[currentHealth-1];
+        var nextSprite = healthSprites[currentHealth-1];
+        if  (nextSprite != null)
+        {
+            rend.sprite = healthSprites[currentHealth-1];
+        } 
+        else 
+        {
+            var errorMessage = string.Format("Error while loading sprite for {0}", gameObject.name);
+            Debug.LogError(errorMessage);
+        } 
     }
 
     private void increaseScore() 
