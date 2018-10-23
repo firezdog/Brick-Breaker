@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250d88705d6ac9d47a5f06197d576efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: {x: -3, y: 10}
+  launchVelocity: {x: 0, y: 10}
   paddle: {fileID: 0}
   rveloffsetFactor: 1
 --- !u!212 &212300040307424532
