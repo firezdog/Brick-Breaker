@@ -677,11 +677,6 @@ Prefab:
       propertyPath: paddle
       value: 
       objectReference: {fileID: 1522798113}
-    - target: {fileID: 114929280210213258, guid: 9dfa14ae7eea291418ff9b7d3b716559,
-        type: 2}
-      propertyPath: rveloffsetFactor
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
   m_IsPrefabAsset: 0
