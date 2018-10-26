@@ -16,9 +16,12 @@ public class Ball : MonoBehaviour
 
     Rigidbody2D ballBody;
 
+    GameStatus status;
+
 	// Use this for initialization
 	void Start ()
     {
+        status = FindObjectOfType<GameStatus>();
 		var paddlePosition = paddle.transform.position;
 		paddleBallDelta = transform.position - paddlePosition;
         ballBody = GetComponent<Rigidbody2D>();
@@ -36,7 +39,7 @@ public class Ball : MonoBehaviour
 
     private void LaunchOnMouseClick()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || status.autoPlay == true)
         {
             ballReleased = true;
             ballBody.velocity = launchVelocity;

@@ -10,6 +10,7 @@ public class GameStatus : MonoBehaviour {
 	[SerializeField] public int score;
 	[SerializeField] public int pointsPerBrick;
 	[SerializeField] public TextMeshProUGUI scoreDisplay;
+	[SerializeField] public bool autoPlay = false;
 
 	void Awake() 
 	{
