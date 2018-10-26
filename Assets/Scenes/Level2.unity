@@ -1157,12 +1157,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1522798113 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114940008002879198, guid: b4583c627971c3c4ba485ee5cbf36f8b,
-    type: 2}
-  m_PrefabInternal: {fileID: 969208914}
-  m_Script: {fileID: 11500000, guid: 7c6448b99fe3f32459afbb527729a51b, type: 3}
 --- !u!1001 &1535488725
 Prefab:
   m_ObjectHideFlags: 0
@@ -1202,11 +1196,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114929280210213258, guid: 9dfa14ae7eea291418ff9b7d3b716559,
-        type: 2}
-      propertyPath: paddle
-      value: 
-      objectReference: {fileID: 1522798113}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
   m_IsPrefabAsset: 0

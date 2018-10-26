@@ -628,11 +628,6 @@ Prefab:
       propertyPath: paddle
       value: 
       objectReference: {fileID: 978102681}
-    - target: {fileID: 114929280210213258, guid: 9dfa14ae7eea291418ff9b7d3b716559,
-        type: 2}
-      propertyPath: rveloffsetFactor
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dfa14ae7eea291418ff9b7d3b716559, type: 2}
   m_IsPrefabAsset: 0
@@ -683,11 +678,6 @@ Prefab:
     - target: {fileID: 114610653738748910, guid: 9a105359f2908194a9daa3d6477c7c28,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114425487521122488, guid: 9a105359f2908194a9daa3d6477c7c28,
-        type: 2}
-      propertyPath: autoPlay
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

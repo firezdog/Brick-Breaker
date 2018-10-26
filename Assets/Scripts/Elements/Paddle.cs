@@ -19,26 +19,18 @@ public class Paddle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 newPaddlePos = new Vector3();
-		if (status.autoPlay == false) {
-			mouseInputUpdatePaddle(newPaddlePos);
-		} else {
-			autoUpdatePaddle(newPaddlePos);
-		}
+		float xPos = status.getAutoPlay() ? autoUpdateX() : mouseInputUpdateX();
+		transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
 	}
 
-	void mouseInputUpdatePaddle(Vector3 newPaddlePos) {
+	float mouseInputUpdateX() {
 		float screenWidth = Screen.width;
 		float xPos = Input.mousePosition.x / screenWidth * worldWidthUnits;
-		xPos = Mathf.Clamp(xPos, xMin, xMax);
-		newPaddlePos = new Vector3(xPos, transform.position.y, transform.position.z);
-		transform.position = newPaddlePos;
+		return Mathf.Clamp(xPos, xMin, xMax);
 	}
 
-	void autoUpdatePaddle(Vector3 newPaddlePos) {
-		float xPos = Mathf.Clamp(ball.transform.position.x, xMin, xMax);
-		newPaddlePos = new Vector3(xPos, transform.position.y, transform.position.z);
-		transform.position = newPaddlePos;
+	float autoUpdateX() {
+		return Mathf.Clamp(ball.transform.position.x, xMin, xMax);
 	}
 
 }

@@ -39,7 +39,7 @@ public class Ball : MonoBehaviour
 
     private void LaunchOnMouseClick()
     {
-        if (Input.GetMouseButtonDown(0) || status.autoPlay == true)
+        if (Input.GetMouseButtonDown(0) || status.getAutoPlay() == true)
         {
             ballReleased = true;
             ballBody.velocity = launchVelocity;

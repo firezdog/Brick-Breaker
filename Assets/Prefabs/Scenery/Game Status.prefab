@@ -90,6 +90,7 @@ MonoBehaviour:
   score: 0
   pointsPerBrick: 10
   scoreDisplay: {fileID: 114610653738748910}
+  autoPlay: 0
 --- !u!114 &114610653738748910
 MonoBehaviour:
   m_ObjectHideFlags: 1
